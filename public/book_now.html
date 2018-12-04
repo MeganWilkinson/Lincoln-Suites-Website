@@ -1,39 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- update the version number as needed -->
-        <script defer src="/__/firebase/5.5.9/firebase-app.js"></script>
-        <!-- include only the Firebase features as you need -->
-        <script defer src="/__/firebase/5.5.9/firebase-auth.js"></script>
-        <script defer src="/__/firebase/5.5.9/firebase-database.js"></script>
-        <script defer src="/__/firebase/5.5.9/firebase-messaging.js"></script>
-        <script defer src="/__/firebase/5.5.9/firebase-storage.js"></script>
-        <!-- initialize the SDK after all desired features are loaded -->
-        <script defer src="/__/firebase/init.js"></script>
-        <!-- bootsrap css -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>Book Now | Lincoln Suites</title>
-    </head>
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/5.5.9/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/5.5.9/firebase-auth.js"></script>
+  <script defer src="/__/firebase/5.5.9/firebase-database.js"></script>
+  <script defer src="/__/firebase/5.5.9/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/5.5.9/firebase-storage.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js"></script>
+  <!-- bootsrap css -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <body>
+  <title>Book Now | Lincoln Suites</title>
+</head>
+
+<body>
+  <div class="row-fluid">
+    <!-- navbar cluster -->
+    <div class="col-fluid">
+      <!-- title text/logo -->
+      <div class="row-fluid navbar-dark bg-dark pt-3">
+        <center>
+          <font color="white" size="+2">Lincoln Suites</font>
+        </center>
+      </div>
+
+      <div class="row-fluid">
         <!-- NavBar -->
-        <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">Lincoln Suites</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                    <a class="nav-item nav-link mx-3" href="#">Features</a>
-                    <a class="nav-item nav-link mx-3" href="#">Rates</a>
-                    <a class="nav-item nav-link mx-3" href="#">Book Now<span class="sr-only">(current)</span></a>
-                </div>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+          <!--a class="navbar-brand" href="index.html">Lincoln Suites</a> -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav mx-auto">
+              <a class="nav-item nav-link mx-3" href="features.html">Features</a>
+              <a class="nav-item nav-link mx-3" href="rooms.html">Rooms</a>
+              <a class="nav-item nav-link mx-3" href="contact.html">Contact</a>
+              <a class="nav-item nav-link mx-3" href="book_now.html">Book Now<span class="sr-only">(current)</span></a>
             </div>
+          </div>
         </nav>
-    </body>
+      </div>
+    </div> <!-- navbar cluster -->
+  </div>
+
+  <!-- book now form -->
+  <div class="row justify-content-center">
+    <div class="col-xl-9">
+      <div class="row justify-content-around">
+
+        <div class="col-md-6 m-3">
+          <form class="needs-validation" novalidate>
+            <div class="form-group">
+              <label for="title">title</label>
+              <select class="form-control" id="title">
+                <option></option>
+                <option>Mr.</option>
+                <option>Ms.</option>
+                <option>Mrs.</option>
+                <option>Dr.</option>
+              </select>
+
+            </div>
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" class="form-control" id="firstName" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" class="form-control" id="lastName" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+              <div class="invalid-feedback">
+                Please input a valid email address.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+              <div class="invalid-feedback">
+                Please input a valid phone number.
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div> <!-- book now form -->
+
+  <script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+  </script>
+
+</body>
+
 
 </html>
